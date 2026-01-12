@@ -12,7 +12,7 @@ _ShellCodeStart:
     nop
     and     w6, w6, w7              // w6 & w7 and store in w6.
     and     w6, w6, #1              // w6 & 1 and stored in w6.
-    cbnz     w6, _UEFI               // Compare w6 with 0, if w6 == 0 goto _UEFI, else execute next instruction(jmp Linux).
+    cbz     w6, _UEFI               // Compare w6 with 0, if w6 == 0 goto _UEFI, else execute next instruction(jmp Linux).
 
 .include "CommonTail.S"
 /* Do not remove the last line  */
